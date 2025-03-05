@@ -8,5 +8,8 @@ return [
         'label' => 'Device type',
         'plural_label' => 'Device types',
     ],
-   ];
-   
+    'devices' => [
+        'label' => 'Device',
+        'plural_label' => 'Devices',
+    ],
+];
