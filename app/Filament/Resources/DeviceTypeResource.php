@@ -23,7 +23,7 @@ class DeviceTypeResource extends Resource
     {
         return __('module_names.navigation_groups.administration');
     }
-    
+
     public static function getModelLabel(): string
     {
         return __('module_names.device_types.label');
@@ -78,7 +78,7 @@ class DeviceTypeResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\DevicesRelationManager::class,
         ];
     }
 

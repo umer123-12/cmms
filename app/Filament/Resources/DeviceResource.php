@@ -75,7 +75,25 @@ class DeviceResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('id')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('name')->label(__('fields.name'))
+                    ->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('erp_code')->label(__('fields.erp_code'))
+                    ->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('type.name')->label(__('fields.type'))
+                    ->searchable()->sortable(),
+                Tables\Columns\IconColumn::make('active')->label(__('fields.active'))
+                    ->boolean()
+                    ->action(function ($record, $column) {
+                        $name = $column->getName();
+                        $record->update([
+                            $name => !$record->$name
+                        ]);
+                    }),
+                Tables\Columns\TextColumn::make('created_at')->label(__('fields.created_at'))
+                    ->dateTime('Y-m-d H:i')
+                    ->searchable()->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
