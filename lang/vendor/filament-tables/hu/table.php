@@ -107,16 +107,16 @@ return [
 
     'empty' => [
 
-        'heading' => 'Nincs megjeleníthető elem',
+        'heading' => 'Nincs találat',
 
-        'description' => 'Hozz létre egy újat a kezdéshez.',
+        'description' => 'Hozzon létre egy erőforrást (:model) a kezdéshez.',
 
     ],
+
 
     'filters' => [
 
         'actions' => [
-
             'apply' => [
                 'label' => 'Szűrők alkalmazása',
             ],
