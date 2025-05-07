@@ -20,4 +20,13 @@ return [
     'inactive' => 'Inactive',
     'qr_code' => 'QR code',
     'attachment' => 'Attachment',
+
+    'creator' => 'Creator',
+    'repairer' => 'Repairer',
+    'priority' => 'Priority',
+    'description' => 'Description',
+    'due_date' => 'Due date',
+    'finish_date' => 'Finish date',
+    'updated_at' => 'Updated at',
+    'attachments' => 'Attachments',
 ];

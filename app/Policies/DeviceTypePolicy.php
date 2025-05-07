@@ -13,7 +13,7 @@ class DeviceTypePolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        return $user->can('read devicetypes');
     }
 
     /**
@@ -21,7 +21,7 @@ class DeviceTypePolicy
      */
     public function view(User $user, DeviceType $deviceType): bool
     {
-        return false;
+        return $user->can('read devicetypes');
     }
 
     /**
@@ -29,7 +29,7 @@ class DeviceTypePolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        return $user->can('create devicetypes');
     }
 
     /**
@@ -37,7 +37,7 @@ class DeviceTypePolicy
      */
     public function update(User $user, DeviceType $deviceType): bool
     {
-        return false;
+        return $user->can('update devicetypes');
     }
 
     /**
@@ -45,7 +45,7 @@ class DeviceTypePolicy
      */
     public function delete(User $user, DeviceType $deviceType): bool
     {
-        return false;
+        return $user->can('delete devicetypes');
     }
 
     /**
@@ -53,7 +53,7 @@ class DeviceTypePolicy
      */
     public function restore(User $user, DeviceType $deviceType): bool
     {
-        return false;
+        return $user->can('restore devicetypes');
     }
 
     /**
@@ -61,6 +61,6 @@ class DeviceTypePolicy
      */
     public function forceDelete(User $user, DeviceType $deviceType): bool
     {
-        return false;
+        return $user->can('forcedelete devicetypes');
     }
 }
