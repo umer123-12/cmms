@@ -11,7 +11,9 @@
         "filament/filament": "^3.2",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
+        "saade/filament-fullcalendar": "^3.2",
         "simplesoftwareio/simple-qrcode": "^4.2",
+        "spatie/laravel-medialibrary": "*",
         "spatie/laravel-permission": "^6.16"
     },
     "require-dev": {

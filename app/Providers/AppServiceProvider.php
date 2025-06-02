@@ -35,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
     {
         LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {
             $switch
-                ->locales(['hu','en']); // also accepts a closure
+                ->locales(['hu','en','fr']); // also accepts a closure
         });
         Gate::policy(Permission::class, PermissionPolicy::class);
         Gate::policy(Role::class, RolePolicy::class);
